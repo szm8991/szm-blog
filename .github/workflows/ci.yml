@@ -20,10 +20,6 @@ jobs:
           node-version: 16.x
 
       - name: Setup
-        run: npm i -g @antfu/ni
-
-      - name: Install
-        run: nci
-
-      - name: Build
-        run: nr docs:build
+        working-directory: scripts
+        run: | 
+        ./deploy.sh
