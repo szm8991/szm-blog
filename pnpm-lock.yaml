@@ -2,9 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   vitepress: 1.0.0-alpha.1
+  vue: ^3.2.33
 
 devDependencies:
   vitepress: registry.npmmirror.com/vitepress/1.0.0-alpha.1
+  vue: registry.npmmirror.com/vue/3.2.36
 
 packages:
 
