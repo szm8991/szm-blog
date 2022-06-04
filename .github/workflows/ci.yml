@@ -24,11 +24,4 @@ jobs:
         run: npm run docs:build
       - name: Deploy to Pages
         run: |
-          cd docs/.vuepress/dist
-          git config --global init.defaultBranch master
-          git init
-          git config user.name "Songzm"
-          git config user.email "${{ secrets.GIT_EMAIL }}"
-          git add .
-          git commit -m "Deploying to gh-pages from @ $GITHUB_SHA in $(date +"%Y年%m月%d日 %T %Z")"
-          git push -f https://zchaoGe:${{ secrets.ACCESS_TOKEN }}@github.com/zchaoGe/blog.git master:gh-pages
+          npm run deploy
