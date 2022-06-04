@@ -14,15 +14,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: Install dependencies
+      - name: Install
         run: npm install
-      - name: Build VuePress
+      - name: Build
         run: npm run docs:build
       - name: Deploy to Pages
-        run: |
-          cd .vuepress/dist
-          git config --global init.defaultBranch master
-          git init
-          git add .
-          git commit -m "Deploying to gh-pages from @ $GITHUB_SHA in $(date +"%Y年%m月%d日 %T %Z")"
-          git push -f https://szm8991:${{ secrets.ACCESS_TOKEN }}@github.com/szm8991/szm-blog.git master:gh-pages
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          BRANCH: gh-pages
+          FOLDER: docs/.vitepress/dist
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
