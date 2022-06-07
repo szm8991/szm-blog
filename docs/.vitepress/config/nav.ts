@@ -1,17 +1,19 @@
-export const nav = [
-  {
-    text: '文档🦄',
-    activeMatch: '/docs/',
-    link: '/docs/hello/hello',
-  },
-  {
-    text: '文章记录🐼',
-    activeMatch: '/article/',
-    link: '/article/milepost/milepost-2021',
-  },
-  {
-    text: 'Github',
-    activeMatch: 'https://github.com/szm8991/szm-blog',
-    link: 'https://github.com/szm8991/szm-blog',
-  },
-];
+export function nav() {
+  return [
+    {
+      text: '笔记🦄',
+      activeMatch: '/docs/',
+      link: '/docs/hello/hello',
+    },
+    {
+      text: '随笔🐼',
+      activeMatch: '/articles/',
+      link: '/articles/post/2022-06',
+    },
+    {
+      text: '仓库🎮',
+      activeMatch: 'https://github.com/szm8991/szm-blog',
+      link: 'https://github.com/szm8991/szm-blog',
+    },
+  ];
+}

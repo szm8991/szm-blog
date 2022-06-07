@@ -1,17 +1,27 @@
 import { defineConfig } from 'vitepress';
 import { nav } from './config/nav';
-import { sidebar } from './config/sidebar';
+import { sidebarDocs, sidebarArticles } from './config/sidebar';
 const config = defineConfig({
-  title: 'Szm',
+  lang: 'zh-cn',
+  title: '小铭🌛',
+  description: 'szm,博客,blog,前端,frontend,javascript,node,git,vue3,vite,读书随笔',
   head: [
     ['link', { rel: 'icon', href: 'https://avatars.githubusercontent.com/u/68761971?s=48&v=4' }],
   ],
-  description: 'Szm,Szm1998,szm,博客,blog,前端,frontend,javascript,node,git,vue3,vite,读书随笔',
+
   base: '/szm-blog/',
   themeConfig: {
     logo: 'https://avatars.githubusercontent.com/u/68761971?s=48&v=4',
-    nav,
-    sidebar,
+    nav: nav(),
+    sidebar: {
+      '/docs/': sidebarDocs(),
+      '/articles/': sidebarArticles(),
+    },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/szm8991/' }],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2022-present VitePress & ZheMing Song',
+    },
   },
 });
 
