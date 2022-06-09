@@ -2,21 +2,11 @@ import { defineConfig } from 'vitepress'
 import { nav } from './config/nav'
 import { sidebarDocs, sidebarArticles } from './config/sidebar'
 const config = defineConfig({
-  appearance: true,
   lang: 'zh-cn',
   title: '小铭🌛',
   description: 'szm,博客,blog,前端,frontend,javascript,node,git,vue3,vite,读书随笔',
   base: '/szm-blog/',
-  // head: [
-  //   [
-  //     'link',
-  //     {
-  //       rel: 'icon',
-  //       href: 'https://avatars.githubusercontent.com/u/68761971?s=48&v=4',
-  //     },
-  //     '/szm-blog/',
-  //   ],
-  // ],
+  appearance: true,
   themeConfig: {
     logo: 'https://avatars.githubusercontent.com/u/68761971?s=48&v=4',
     siteTitle: 'Hello World',
